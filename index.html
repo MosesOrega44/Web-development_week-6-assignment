@@ -1,147 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>JavaScript Learning Project</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Interactive JS Project</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-    <div class="container">
-        <header>
-            <h1>JavaScript Learning Project</h1>
-            <p class="description">A demonstration of JavaScript fundamentals including variables, conditionals, functions, loops, and DOM interactions.</p>
-        </header>
-        
-        <!-- Part 1: Variables and Conditionals -->
-        <section class="section" id="part1">
-            <h2>Part 1: Variables and Conditionals</h2>
-            
-            <div class="code-block">
-                // Variable declarations<br>
-                let userName = "John";<br>
-                const userAge = 25;<br>
-                var isStudent = true;<br>
-                let favoriteFruits = ["Apple", "Banana", "Orange"];<br>
-                <br>
-                // Conditional statements<br>
-                if (userAge >= 18) {<br>
-                &nbsp;&nbsp;console.log("You are an adult");<br>
-                } else {<br>
-                &nbsp;&nbsp;console.log("You are a minor");<br>
-                }
-            </div>
-            
-            <div class="interactive-area">
-                <h3>Variable & Conditional Demo</h3>
-                <p>Enter your name and age:</p>
-                <input type="text" id="nameInput" placeholder="Your name">
-                <input type="number" id="ageInput" placeholder="Your age">
-                <button onclick="checkAge()">Check Age Status</button>
-                <div class="output" id="ageOutput"></div>
-            </div>
-        </section>
-        
-        <!-- Part 2: Functions -->
-        <section class="section" id="part2">
-            <h2>Part 2: Functions</h2>
-            
-            <div class="code-block">
-                // Function declaration<br>
-                function greetUser(name) {<br>
-                &nbsp;&nbsp;return `Hello, ${name}! Welcome to our site.`;<br>
-                }<br>
-                <br>
-                // Function expression<br>
-                const calculateArea = function(width, height) {<br>
-                &nbsp;&nbsp;return width * height;<br>
-                };
-            </div>
-            
-            <div class="function-demo">
-                <div class="function-card">
-                    <h3>Greeting Function</h3>
-                    <input type="text" id="greetInput" placeholder="Your name">
-                    <button onclick="showGreeting()">Greet Me</button>
-                    <div class="output" id="greetOutput"></div>
-                </div>
-                
-                <div class="function-card">
-                    <h3>Area Calculator</h3>
-                    <input type="number" id="widthInput" placeholder="Width">
-                    <input type="number" id="heightInput" placeholder="Height">
-                    <button onclick="calculateRectangleArea()">Calculate Area</button>
-                    <div class="output" id="areaOutput"></div>
-                </div>
-            </div>
-        </section>
-        
-        <!-- Part 3: Loops -->
-        <section class="section" id="part3">
-            <h2>Part 3: Loops</h2>
-            
-            <div class="code-block">
-                // For loop example<br>
-                for (let i = 1; i <= 5; i++) {<br>
-                &nbsp;&nbsp;console.log(`Count: ${i}`);<br>
-                }<br>
-                <br>
-                // While loop example<br>
-                let count = 1;<br>
-                while (count <= 5) {<br>
-                &nbsp;&nbsp;console.log(`While count: ${count}`);<br>
-                &nbsp;&nbsp;count++;<br>
-                }
-            </div>
-            
-            <div class="loop-demo">
-                <div class="loop-card">
-                    <h3>For Loop Demo</h3>
-                    <input type="number" id="forLoopInput" placeholder="Enter a number" value="5">
-                    <button onclick="runForLoop()">Run For Loop</button>
-                    <div class="output" id="forLoopOutput"></div>
-                </div>
-                
-                <div class="loop-card">
-                    <h3>While Loop Demo</h3>
-                    <input type="number" id="whileLoopInput" placeholder="Enter a number" value="5">
-                    <button onclick="runWhileLoop()">Run While Loop</button>
-                    <div class="output" id="whileLoopOutput"></div>
-                </div>
-            </div>
-        </section>
-        
-        <!-- Part 4: DOM Interactions -->
-        <section class="section" id="part4">
-            <h2>Part 4: DOM Interactions</h2>
-            
-            <div class="code-block">
-                // Changing text content<br>
-                document.getElementById('elementId').textContent = 'New text';<br>
-                <br>
-                // Changing styles<br>
-                document.getElementById('elementId').style.color = 'blue';<br>
-                <br>
-                // Handling events<br>
-                element.addEventListener('click', function() {<br>
-                &nbsp;&nbsp;// Handle click event<br>
-                });
-            </div>
-            
-            <div class="interactive-area">
-                <h3>DOM Manipulation Demo</h3>
-                <p id="textToChange">This text will change when you click the button.</p>
-                <button onclick="changeText()">Change Text</button>
-                <button onclick="changeColor()">Change Color</button>
-                <button onclick="toggleVisibility()">Toggle Visibility</button>
-            </div>
-        </section>
-        
-        <footer>
-            <p>JavaScript Learning Project - Demonstrating Fundamentals</p>
-        </footer>
-    </div>
+  <h1>JavaScript Interactivity Demo</h1>
 
-    <script src="script.js"></script>
+  <!-- Part 1: Event Handling Example -->
+  <section>
+    <h2>Light / Dark Mode Toggle</h2>
+    <button id="toggleModeBtn">Toggle Dark Mode</button>
+  </section>
+
+  <!-- Part 2: Interactive Elements -->
+  <section>
+    <h2>Counter Game</h2>
+    <button id="increaseBtn">Increase</button>
+    <button id="resetBtn">Reset</button>
+    <p>Current Count: <span id="countDisplay">0</span></p>
+  </section>
+
+  <section>
+    <h2>FAQ Section</h2>
+    <div class="faq-item">
+      <h3 class="faq-question">What is JavaScript?</h3>
+      <p class="faq-answer hidden">JavaScript is a programming language used to create interactive effects within web browsers.</p>
+    </div>
+    <div class="faq-item">
+      <h3 class="faq-question">What is DOM?</h3>
+      <p class="faq-answer hidden">The DOM is a programming interface for HTML and XML documents.</p>
+    </div>
+  </section>
+
+  <!-- Part 3: Form Validation -->
+  <section>
+    <h2>Sign Up Form</h2>
+    <form id="signupForm">
+      <label>
+        Name:
+        <input type="text" id="name" />
+        <small class="error" id="nameError"></small>
+      </label><br />
+
+      <label>
+        Email:
+        <input type="text" id="email" />
+        <small class="error" id="emailError"></small>
+      </label><br />
+
+      <label>
+        Password:
+        <input type="password" id="password" />
+        <small class="error" id="passwordError"></small>
+      </label><br />
+
+      <button type="submit">Sign Up</button>
+      <p id="formSuccess" class="success"></p>
+    </form>
+  </section>
+
+  <script src="script.js"></script>
 </body>
 </html>
